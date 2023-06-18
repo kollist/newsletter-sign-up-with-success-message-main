@@ -1,0 +1,120 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-space: 15px;
+    --main-color: #242742;
+    --secondary-color: #9294a0;
+}
+
+body {
+    background-color: #36384e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height:100vh;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    .container {
+        width: 55%;
+        height: 500px;
+        background-color: white;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(450px * 0.04) 0;
+        .image-side {
+            width: 50%;
+            height: 100%;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .signup-side {
+            width: 50%;
+            height: 90%;
+            color: var(--main-color);
+            margin-top: 10%;
+            margin-left: 8%;
+            font-size: .8rem;
+            .title {
+                color: var(--main-color);
+                h1 {
+                    font-size: 2.5rem; 
+                }
+            }
+            .description {
+                line-height: 1.3rem;
+                width: 90%;
+                padding-top: var(--main-space);
+            }
+            .options {
+                padding: var(--main-space) 0;
+                ul {
+                    list-style: none;
+                    li {
+                        font-size: var(--main-space);
+                        padding-bottom: .625rem;
+                        font-size: .8rem;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        svg {
+                            height: var(--main-space);
+                            width: var(--main-space);
+                        }
+                        span {
+                            padding-left: var(--main-space);
+                        }
+                    }
+                }
+            }
+            .email-input {
+                label {
+                    display: block;
+                    font-weight: 700;
+                    padding-bottom: var(--main-space);
+                }
+                input {
+                    border: 1px solid var(--secondary-color);
+                    outline: none;
+                    border-radius: 5px;
+                    padding: 13px var(--main-space) ;
+                    width: 90%;
+                    color: var(--secondary-color);
+                    cursor: pointer;
+                }   
+            }
+            .button {
+                padding: var(--main-space) 0;
+                width: 90%;
+                button {
+                    width: 100%;
+                    padding: var(--main-space);
+                    font-weight: 700;
+                    color: white;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    &:hover {
+                        background:  linear-gradient(to right, #ff6257, #ff6257 60%, #ff8f47); 
+                        box-shadow: 1px 1px var(--main-space) #ff8f47;
+                        border: none;                    
+                    }
+                }
+            }
+        }
+    }
+}
+
